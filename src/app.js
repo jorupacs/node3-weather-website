@@ -71,8 +71,8 @@ app.get('/weather', (req, res) => {
             }
 
             res.send({
-                forecast: weather.current.weather_descriptions[0] + '. It is currently ' + weather.current.temperature + ' degrees out. There is ' + weather.current.precip + ' chance of rain',
-                location: weather.location.name + ', ' + weather.location.region + ', ' + weather.location.country,
+                forecast: weather,
+                location: location.place,
                 address: address,
             })
         })
